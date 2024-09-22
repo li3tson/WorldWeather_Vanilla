@@ -1,0 +1,168 @@
+#wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  max-width: 55%;
+  max-height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 1rem;
+
+  transform: translate(-50%, -50%);
+}
+
+#wrapper__content {
+  max-width: 100%;
+  max-height: 100%;
+  width: max-content;
+  height: max-content;
+
+  display: flex;
+  align-items: center;
+
+  margin: auto auto;
+}
+
+#content__list {
+  width: 100%;
+  height: 100%;
+
+  display: grid;
+  grid-template-rows: repeat(3, 13.7rem);
+  grid-template-columns: repeat(3, 13.5rem);
+  gap: 0.5rem;
+}
+
+#content__list > .list__item {
+  position: relative;
+
+  width: 13.5rem;
+  height: 13.7rem;
+
+  padding: 1rem;
+
+  text-decoration: none;
+
+  list-style: none;
+
+  background-color: var(--color-primary);
+}
+
+.list__item > .item__icon {
+  width: 3.7rem;
+  height: auto;
+}
+
+.list__item .item__bottom {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  width: 100%;
+  height: 60%;
+
+  display: block;
+
+  padding: 1rem;
+
+  background: var(--gradient);
+}
+
+.item__bottom .bottom__temperature {
+  margin-bottom: 1rem;
+
+  font-size: 2.5rem;
+  font-weight: bold;
+
+  color: var(--color-white);
+}
+
+.item__bottom .bottom__state {
+  font-size: 2rem;
+  font-weight: bold;
+
+  color: var(--color-black);
+}
+
+#list__item--date {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-area: 1 / 3;
+}
+
+#list__item--date > .item__text {
+  font-size: 2rem;
+  font-weight: bolder;
+
+  color: var(--color-white);
+}
+
+footer {
+  position: absolute;
+  bottom: 4rem;
+  left: 1rem;
+
+  width: max-content;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+#title {
+  width: 16rem;
+
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 0.78rem;
+  line-height: 2.5rem;
+}
+
+#pagination {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  padding-right: 0.78rem;
+}
+
+.pagination__btn {
+  width: 2rem;
+  height: 2rem;
+
+  font-size: 0.875rem;
+
+  border: none;
+
+  cursor: pointer;
+}
+
+#pagination__btnPageList {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+#pagination__btnPageList .btnPageList__item {
+  text-decoration: none;
+
+  list-style: none;
+}
+
+.btnPageList__item > .item__btn {
+  width: 2rem;
+  height: 2rem;
+}
+
+.btnPageList__item > #activated {
+  color: var(--color-white);
+  background-color: var(--color-primary);
+}
