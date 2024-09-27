@@ -38,7 +38,7 @@ const renderPageItems = {
 
     let weatherApiData = await weatherAPI(latlng)
 
-    renderDateCard(cardWrapperElement)
+    renderDateCard()
 
     if (weatherApiData.cod !== '404') {
       let temperature         = Math.ceil(weatherApiData.main.temp)

@@ -55,7 +55,7 @@ function renderCard(capital, temperature, weatherDescription) {
   cardWrapperElement.appendChild(listItemElement)
 }
 
-function renderDateCard(cardWrapperElement) {
+function renderDateCard() {
   const listItemElement = document.createElement('li')
   listItemElement.classList.add('list__item')
   listItemElement.setAttribute('id', 'list__item--date')
