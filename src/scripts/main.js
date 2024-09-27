@@ -44,7 +44,7 @@ const renderPageItems = {
       let temperature         = Math.ceil(weatherApiData.main.temp)
       let weatherDescription  = weatherApiData.weather[0].description
 
-      renderCard(cardWrapperElement, capital, temperature, weatherDescription)
+      renderCard(capital, temperature, weatherDescription)
     }
   },
 

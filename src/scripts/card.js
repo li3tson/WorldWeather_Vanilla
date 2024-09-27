@@ -1,9 +1,10 @@
 import { currentDate } from './utils/time.js'
 import { iconMapper } from './utils/iconMapper.js'
 
+const cardWrapperElement = document.getElementById('content__list')
 const continentSelectorElement = document.getElementById('continent')
 
-function renderCard(targetContainer, capital, temperature, weatherDescription) {
+function renderCard(capital, temperature, weatherDescription) {
   const capitalCityNameShortener =
     capital.length >= 10 ? `${capital.slice(0, 9)}...` : capital
 
@@ -51,10 +52,10 @@ function renderCard(targetContainer, capital, temperature, weatherDescription) {
   listItemElement.appendChild(weatherIconElement)
   listItemElement.appendChild(bottomSpanElement)
 
-  targetContainer.appendChild(listItemElement)
+  cardWrapperElement.appendChild(listItemElement)
 }
 
-function renderDateCard(targetContainer) {
+function renderDateCard(cardWrapperElement) {
   const listItemElement = document.createElement('li')
   listItemElement.classList.add('list__item')
   listItemElement.setAttribute('id', 'list__item--date')
@@ -67,7 +68,7 @@ function renderDateCard(targetContainer) {
 
   listItemElement.appendChild(textElement)
 
-  targetContainer.appendChild(listItemElement)
+  cardWrapperElement.appendChild(listItemElement)
 }
 
 export { renderCard, renderDateCard }
