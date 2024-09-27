@@ -113,7 +113,7 @@ footer {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 1rem;
 }
 
 #title {
@@ -124,6 +124,18 @@ footer {
   font-weight: bold;
   letter-spacing: 0.78rem;
   line-height: 2.5rem;
+}
+
+#continent {
+  width: 14rem;
+  height: 3rem;
+
+  font-size: 1rem;
+
+  padding: 1rem;
+  margin-right: 0.78rem;
+
+  border: none;
 }
 
 #pagination {

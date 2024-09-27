@@ -3,23 +3,38 @@ import { countriesAPI, weatherAPI } from './services.js'
 import { paginationControls, state, update } from './pagination.js'
 
 const cardWrapperElement = document.getElementById('content__list')
+const continentSelectorElement = document.getElementById('continent')
 
-const validCountriesList = [
-  'France', 'Spain', 'United States', 'China', 'Italy', 'Mexico', 'United Kingdom',
-  'Germany', 'Thailand', 'Turkey', 'Russia', 'Japan', 'Austria', 'Greece', 'Indonesia',
-  'Croatia', 'Portugal', 'Israel', 'South Africa', 'Angola', 'Canada', 'Switzerland',
-  'Brazil', 'India'
-]
+const continents = {
+  africa: [
+    'Algeria', 'Angola', 'Benin', 'Botswana', 'Burkina Faso', 'Burundi', 'Cameroon',
+    'Cape Verde', 'Central African Republic', 'Chad', 'Comoros', 'Djibouti', 'DR Congo',
+    'Egypt', 'Equatorial Guinea', 'Eritrea', 'Eswatini', 'Ethiopia', 'Gabon', 'Gambia',
+    'Ghana', 'Guinea', 'Guinea-Bissau', 'Ivory Coast', 'Kenya', 'Lesotho', 'Liberia',
+    'Libya', 'Madagascar', 'Malawi', 'Mali', 'Mauritania', 'Mauritius', 'Morocco',
+    'Mozambique', 'Namibia', 'Niger', 'Nigeria', 'Rwanda', 'São Tomé and Príncipe',
+    'Senegal', 'Seychelles', 'Sierra Leone', 'Somalia', 'South Africa', 'South Sudan',
+    'Sudan', 'Tanzania', 'Togo', 'Tunisia', 'Uganda', 'Zambia', 'Zimbabwe'
+  ],
+  asia: ['China', 'Thailand', 'Japan', 'Indonesia', 'India'],
+  europe: [
+    'France', 'Spain', 'Italy', 'United Kingdom', 'Germany', 'Turkey', 'Russia',
+    'Austria', 'Greece', 'Croatia', 'Portugal', 'Israel', 'Switzerland'
+  ],
+  northAmerica: ['United States', 'Mexico', 'Canada'],
+  southAmerica: ['Brazil', 'Peru'],
+  oceania: ['Australia', 'New Zealand'],
+}
 
 const countriesApiData   = await countriesAPI()
-const countryData        = countriesApiData.filter(item => validCountriesList.includes(item.name.common))
+let countries            = countriesApiData.filter(item => continents.africa.includes(item.name.common))
 
-state.totalPages = Math.ceil(countryData.length / state.perPage)
+state.totalPages = Math.ceil(countries.length / state.perPage)
 
 const renderPageItems = {
-  async create(item) {
-    let capital = item.capital[0]
-    let latlng  = item.capitalInfo.latlng
+  async create(country) {
+    let capital = country.capital[0]
+    let latlng  = country.capitalInfo.latlng
 
     let weatherApiData = await weatherAPI(latlng)
 
@@ -39,7 +54,7 @@ const renderPageItems = {
     let page              = state.currentPage - 1
     let start             = page * state.perPage
     let end               = start + state.perPage
-    const paginatedItems  = countryData.slice(start, end)
+    const paginatedItems  = countries.slice(start, end)
 
     paginatedItems.forEach(renderPageItems.create)
   }
@@ -49,6 +64,15 @@ function init() {
   update()
   paginationControls.createListeners()
 }
+
+continentSelectorElement.addEventListener('change', () => {
+  const currentContinent = continentSelectorElement.value
+
+  countries = countriesApiData.filter(item => continents[currentContinent].includes(item.name.common))
+  state.totalPages = Math.ceil(countries.length / state.perPage)
+
+  init()
+})
 
 init()
 

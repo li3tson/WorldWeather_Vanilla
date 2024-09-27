@@ -1,14 +1,17 @@
 import { currentDate } from './utils/time.js'
 import { iconMapper } from './utils/iconMapper.js'
 
-function renderCard( targetContainer, capital, temperature, weatherDescription) {
+const continentSelectorElement = document.getElementById('continent')
+
+function renderCard(targetContainer, capital, temperature, weatherDescription) {
   const capitalCityNameShortener =
     capital.length >= 10 ? `${capital.slice(0, 9)}...` : capital
 
   const listItemElement = document.createElement('li')
   listItemElement.classList.add('list__item')
 
-  const backgroundPath = `./src/assets/images/${capital}.webp`
+  const currentContinent = continentSelectorElement.value
+  const backgroundPath = `./src/assets/images/${currentContinent}/${capital}.webp`
 
   listItemElement.style = `
     background-image: url('${backgroundPath}');
