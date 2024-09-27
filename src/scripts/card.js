@@ -1,5 +1,6 @@
 import { currentDate } from './utils/time.js'
 import { iconMapper } from './utils/iconMapper.js'
+import { temperatureMapper } from './utils/temperatureMapper.js'
 
 const cardWrapperElement = document.getElementById('content__list')
 const continentSelectorElement = document.getElementById('continent')
@@ -43,6 +44,10 @@ function renderCard(capital, temperature, weatherDescription) {
 
   const bottomSpanElement = document.createElement('span')
   bottomSpanElement.classList.add('item__bottom')
+
+  bottomSpanElement.style = `
+    background: var(${temperatureMapper(temperature)});
+  `
 
   temperatureElement.appendChild(temperatureUnitElement)
 

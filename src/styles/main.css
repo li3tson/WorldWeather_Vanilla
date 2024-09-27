@@ -68,8 +68,6 @@
   display: block;
 
   padding: 1rem;
-
-  background: var(--gradient);
 }
 
 .item__bottom .bottom__temperature {

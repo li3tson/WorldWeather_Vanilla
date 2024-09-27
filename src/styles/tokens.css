@@ -3,5 +3,9 @@
   --color-secondary: #FFAE42;
   --color-white: #ffffff;
   --color-black: #000000;
-  --gradient: linear-gradient(0deg, rgba(255,174,66,1) 0%, rgba(255,174,66,0.2007003484987745) 100%);
+
+  --gradient-veryCold: linear-gradient(0deg, rgba(176, 196, 222, 1) 0%, rgba(176, 196, 222,0.2007003484987745) 100%);
+  --gradient-cold: linear-gradient(0deg, rgba(100, 149, 237, 1) 0%, rgba(100, 149, 237,0.2007003484987745) 100%);
+  --gradient-hot: linear-gradient(0deg, rgba(255,174,66, 1) 0%, rgba(255, 174, 66,0.2007003484987745) 100%);
+  --gradient-veryHot: linear-gradient(0deg, rgba(255, 127, 0, 1) 0%, rgba(255, 127, 0, 0.2007003484987745) 100%);
 }
