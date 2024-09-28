@@ -1,11 +1,11 @@
 
 # :building_construction: Contributing Guide
 
-Hey, there :wave:! I'm really excited to see that someone is interested in contributing to Adda Weather! Before submitting your contribution, please read the following guide.
+Hey, there :wave:! I'm really excited to see that someone is interested in contributing to World Weather! Before submitting your contribution, please read the following guide.
 
 ## :man_technologist: Repo Setup
 
-To develop locally, fork the Adda Weather repository and clone it in your local machine.
+To develop locally, fork the World Weather repository and clone it in your local machine.
 
 To run the project in your local environment, simply open the index.html file in any browser or use the vscode live server extension or even if you prefer, you can create a simple local server to run the project.
 

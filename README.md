@@ -1,10 +1,10 @@
 <img src="https://img.shields.io/badge/Version-1.0.0-brightgreen" alt="version" />&nbsp;
-<img src="https://img.shields.io/github/last-commit/li3tson/AddaWeather" alt="last-communit" />&nbsp;
-<img src="https://img.shields.io/github/issues/li3tson/AddaWeather" alt="issues" />
+<img src="https://img.shields.io/github/last-commit/li3tson/WorldWeather" alt="last-communit" />&nbsp;
+<img src="https://img.shields.io/github/issues/li3tson/WorldWeather" alt="issues" />
 
 ## :rocket: About
 
-`Adda Weather` is a website designed to revolutionize the way you track weather conditions. Beyond simply displaying climatic data from select countries, Adda Weather provides an immersive and elegant user experience. To preview the project, click [here](https://raw.githubusercontent.com/li3tson/AddaWeather/main/public/Preview.png).
+`World Weather` is a website designed to revolutionize the way you track weather conditions. Beyond simply displaying climatic data from select countries, World Weather provides an immersive and elegant user experience. To preview the project, click [here](https://raw.githubusercontent.com/li3tson/WorldWeather/main/public/Preview.png).
 
 ## :package: Technologies
 

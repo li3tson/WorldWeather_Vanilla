@@ -1,6 +1,6 @@
 {
-  "name": "Adda Weather",
-  "short_name": "Adda",
+  "name": "World Weather",
+  "short_name": "World Weather",
   "icons":[
     {
       "src": "/android-chrome-192x192.png",
