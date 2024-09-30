@@ -36,6 +36,8 @@ const renderPageItems = {
     let capital = country.capital[0]
     let latlng  = country.capitalInfo.latlng
 
+    capital = capital.replace("N'Djamena", 'Djamena')
+
     let weatherApiData = await weatherAPI(latlng)
 
     renderDateCard()
