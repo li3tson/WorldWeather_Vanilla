@@ -1,6 +1,6 @@
 <img src="https://img.shields.io/badge/Version-1.0.0-brightgreen" alt="version" />&nbsp;
-<img src="https://img.shields.io/github/last-commit/liets0n/WorldWeather" alt="last-communit" />&nbsp;
-<img src="https://img.shields.io/github/issues/liets0n/WorldWeather" alt="issues" />
+<img src="https://img.shields.io/github/last-commit/liets0n/WorldWeather_Vanilla" alt="last-communit" />&nbsp;
+<img src="https://img.shields.io/github/issues/liets0n/WorldWeather_Vanilla" alt="issues" />
 
 ## :rocket: About
 
