@@ -50,11 +50,6 @@
   list-style: none;
 
   background-color: var(--color-primary);
-
-  animation-name: slideIn;
-  animation-duration: 1s;
-  animation-timing-function: ease-out;
-  animation-delay: 0;
 }
 
 .list__item > .item__icon {
@@ -103,18 +98,6 @@
   font-weight: bolder;
 
   color: var(--color-white);
-}
-
-@keyframes slideIn {
-  0% {
-    opacity: 0;
-    transform: translateX(-1.5rem);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
 }
 
 footer {
