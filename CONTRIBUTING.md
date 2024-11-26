@@ -7,7 +7,15 @@ Hey, there :wave:! I'm really excited to see that someone is interested in contr
 
 To develop locally, fork the World Weather repository and clone it in your local machine.
 
-To run the project in your local environment, simply open the index.html file in any browser or use the vscode live server extension or even if you prefer, you can create a simple local server to run the project.
+To run the project in your local environment, you have a few options:
+
+1. Open the index.html file directly in any web browser.
+
+2. Use the VS Code Live Server extension for a seamless development experience.
+
+3. Set up a simple local server (if you prefer) to run the project.
+
+Choose the method that best suits your workflow!
 
 ## :file_folder: Folder structure
 
